@@ -24,7 +24,7 @@ describe Order do
   end
 
   describe "#show" do
-    xit "outputs in the console the bill with the dish name and the price" do
+    it "outputs in the console the bill with the dish name and the price" do
       order.add("arepa", 2)
       order.add("cachapa", 3)
       order.show
