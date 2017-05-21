@@ -24,10 +24,13 @@ describe Order do
   end
 
   describe "#show" do
-    it "outputs in the console the bill with the dish name and the price" do
+
+    before do
       order.add("arepa", 2)
       order.add("cachapa", 3)
-      order.show
+    end
+    xit "outputs in the console the bill with the dish name and the price" do
+      expect(order.show).to output().to_stdout
     end
   end
 end

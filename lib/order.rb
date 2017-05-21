@@ -1,3 +1,5 @@
+require_relative "./menu.rb"
+
 class Order
   attr_reader :bill
 
@@ -10,6 +12,9 @@ class Order
 
   def add(dish_name, amount)
     bill.push(dish: dish_name, price: amount * PRICE )
+  end
+
+  def show
   end
 
 end

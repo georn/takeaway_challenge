@@ -1,11 +1,11 @@
 class Menu
 
   def initialize
-    @carte = [{ name: "Arepa Pelua", price: 7 },{ name: "Yuca", price: 5 }]
+    @menu = [{ name: "Arepa Pelua", price: 7 },{ name: "Yuca", price: 5 }]
   end
 
-  def print_carte_dishes
-    carte.each do |dish|
+  def print_menu_dishes
+    @menu.each do |dish|
       puts "#{dish[:name]}  #{dish[:price]}£"
     end
   end
