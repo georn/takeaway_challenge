@@ -3,18 +3,18 @@ require_relative "./menu.rb"
 class Order
   attr_reader :bill
 
-  # REMEMBER TO TAKE OUT
-  PRICE = 1
-
   def initialize
     @bill = []
+    @menu = Menu.new
   end
 
   def add(dish_name, amount)
-    bill.push(dish: dish_name, price: amount * PRICE )
+    @menu.menu_checker(dish_name)
+    bill.push(dish: @menu.get_name(dish_name), price: amount * @menu.get_price(dish_name) )
   end
 
-  def show
+  def show_menu
+    menu.print_menu_dishes
   end
 
 end
